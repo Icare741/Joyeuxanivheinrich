@@ -61,12 +61,19 @@
       position: absolute;
       animation: cringeAnimation 5s infinite linear;
     }
+
+    .gift-code {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #333333;
+    }
   </style>
   <script>
     function showVideo() {
       var videoContainer = document.getElementById("video-container");
       var videoFrame = document.createElement("iframe");
-      videoFrame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; // Ajout du paramètre autoplay=1 pour lancer automatiquement la vidéo
+      videoFrame.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; 
+      // Ajout du paramètre autoplay=1 pour lancer automatiquement la vidéo
       videoFrame.width = "560";
       videoFrame.height = "315";
       videoFrame.frameBorder = "0";
@@ -85,6 +92,10 @@
         gifs[i].style.left = x + "px";
         gifs[i].style.top = y + "px";
       }
+
+      var giftCodeContainer = document.getElementById("gift-code-container");
+      var giftCodeText = "Ton cadeau : 6Y8C0-ZVDDV-33RMH:LD3Y9-QY3LW-F93ZG:RC367-4P6LQ-J5Y9R:PFYNX-Z720Z-A2T49:KGVJM-B34RF-PHJQ3:LQYH9-WJV6P-3KPCJ:C3VW4-46BRQ-J4C7G";
+      giftCodeContainer.innerText = "Ton cadeau : " + giftCodeText;
     }
   </script>
 </head>
@@ -92,7 +103,7 @@
   <h1>Joyeux anniversaire Heinrich !</h1>
   <p>Que cette journée soit remplie de bonheur et de joie.</p>
   <p>Profite de cette occasion spéciale pour te faire plaisir et t'amuser !</p>
-  <a class="rickroll-link" href="javascript:void(0);" onclick="showVideo();">Clique ici pour ton cadeau!</a>
+  <a class="rickroll-link" href="javascript:void(0);" onclick="showVideo();">Clique ici pour ton cadeau !</a>
   <div id="video-container" class="video-container"></div>
   <div id="image-container" class="image-container">
     <img class="cringe-gif" src="https://media.discordapp.net/attachments/1018248539257712660/1051598161585647656/telechargement.gif" alt="GIF cringe 1" width="200" height="200">
@@ -117,5 +128,7 @@
     <img class="cringe-gif" src="https://media.discordapp.net/attachments/1018248539257712660/1051598161585647656/telechargement.gif" alt="GIF cringe 19" width="200" height="200">
     <img class="cringe-gif" src="https://media.discordapp.net/attachments/1018248539257712660/1051598161585647656/telechargement.gif" alt="GIF cringe 20" width="200" height="200">
   </div>
+  
+  <div id="gift-code-container"></div>
 </body>
 </html>
